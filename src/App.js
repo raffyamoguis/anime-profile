@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import profile from './ig/profile.png';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,8 +18,8 @@ function App() {
         <Navbar.Brand href="#home">
           <img
             src={logo}
-            width="30"
-            height="30"
+            width="40"
+            height="40"
             className="d-inline-block align-top"
             alt=""
           />
@@ -30,7 +31,7 @@ function App() {
 
           <Nav className>
             <InputGroup>
-              <InputGroup.Text className="search-form-addon" id="search-addon">@</InputGroup.Text>
+              <InputGroup.Text className="search-form-addon" id="search-addon"><i class="bi bi-search"></i></InputGroup.Text>
               <FormControl
                 className="search-form"
                 placeholder="Search"
@@ -40,21 +41,29 @@ function App() {
             </InputGroup>
           </Nav>
 
-          <Nav className="mx-auto" activeKey="/home">
-            <Nav.Item>
-              <Nav.Link href="/home">Active</Nav.Link>
+          <Nav className="mx-auto menu-nav" activeKey="/home">
+            <Nav.Item className='menu-nav-item'>
+              <Nav.Link href="/home" className="menuIcon"><i className="bi bi-house-door"></i></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-1">Link</Nav.Link>
+            <Nav.Item className='menu-nav-item'>
+              <Nav.Link eventKey="link-1" className="menuIcon"><i className='bi bi-play-circle'></i></Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="link-2">Link</Nav.Link>
+            <Nav.Item className='menu-nav-item'>
+              <Nav.Link eventKey="link-2" className="menuIcon"><i className='bi bi-people'></i></Nav.Link>
             </Nav.Item>
           </Nav>
 
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <Nav.Link href="#deets" >
+              <img
+                src={profile}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt=""
+                style={{ marginRight: '5px' }}
+              />John Doe</Nav.Link>
+            <NavDropdown className='test' align='end' title="">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
