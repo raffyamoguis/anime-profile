@@ -12,7 +12,7 @@ import FormControl from 'react-bootstrap/FormControl'
 const Header = () => {
     return (
         <Navbar className="navbarlight" collapseOnSelect expand="lg" bg="light" variant="light">
-            <Container fluid>
+            <Container >
 
                 {/* Navbar Logo */}
                 <Navbar.Brand href="#home">

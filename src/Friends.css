@@ -1,0 +1,15 @@
+.online-friends {
+    position: relative;
+}
+
+.online-friends-content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
