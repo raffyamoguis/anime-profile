@@ -9,6 +9,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 
+var x = window.matchMedia("(max-width: 991px");
+myFunction(x);
+x.addListener(myFunction);
+
+function myFunction(x) {
+    if (x.matches) {
+        document.getElementById("#test").textContent += "<i className='bi bi-house-door'></i> Home"
+    }
+}
+
 const Header = () => {
     return (
         <Navbar className="navbarlight" collapseOnSelect expand="lg" bg="light" variant="light">
@@ -29,7 +39,7 @@ const Header = () => {
 
                 <Navbar.Collapse id="responsive-navbar-nav">
 
-                    <Nav className>
+                    <Nav className='search'>
                         <InputGroup>
                             <InputGroup.Text className="search-form-addon" id="search-addon"><i class="bi bi-search"></i></InputGroup.Text>
                             <FormControl
@@ -43,13 +53,19 @@ const Header = () => {
 
                     <Nav className="mx-auto menu-nav" activeKey="/home">
                         <Nav.Item className='menu-nav-item'>
-                            <Nav.Link href="/home" className="menuIcon"><i className="bi bi-house-door"></i></Nav.Link>
+                            <Nav.Link href="/home" className="menuIcon" id='test'>
+                                <i className="bi bi-house-door"></i>
+                            </Nav.Link>
                         </Nav.Item>
                         <Nav.Item className='menu-nav-item'>
-                            <Nav.Link eventKey="link-1" className="menuIcon"><i className='bi bi-play-circle'></i></Nav.Link>
+                            <Nav.Link eventKey="link-1" className="menuIcon">
+                                <i className='bi bi-play-circle'></i>
+                            </Nav.Link>
                         </Nav.Item>
                         <Nav.Item className='menu-nav-item'>
-                            <Nav.Link eventKey="link-2" className="menuIcon"><i className='bi bi-people'></i></Nav.Link>
+                            <Nav.Link eventKey="link-2" className="menuIcon">
+                                <i className='bi bi-people'></i>
+                            </Nav.Link>
                         </Nav.Item>
                     </Nav>
 

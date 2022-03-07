@@ -12,7 +12,15 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-
+  .search {
+    margin-top: .5em !important;
+  }
+  .menu-nav {
+    margin-top: 1px !important;
+  }
+  i.bi {
+    margin-left: -50px;
+  }
 }
 
 /* .test {
