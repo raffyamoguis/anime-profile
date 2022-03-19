@@ -8,7 +8,7 @@ const Friends = () => {
         <>
             <ListGroup className='anime-news'>
                 <ListGroup.Item className='anime-news-item'>
-                    <b>Friends</b>
+                    <b style={{ color: '#2f4858' }}>Friends</b>
                 </ListGroup.Item>
                 <ListGroup.Item className='anime-news-item'>
                     <img

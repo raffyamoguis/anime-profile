@@ -22,14 +22,18 @@
     color: #65676B;
   }
   
+@media only screen and (min-width: 992px) {
   .menuIcon {
     font-size: 18pt !important;
-    /* margin-left: 25px; */
     width: 100px;
     text-align: center !important;
-    border-radius: 25px;
   }
-  
+}
+
+.menuIcon {
+  border-radius: 25px;
+}
+
   .menuIcon:hover {
     background-color: #f7f7f7;
     border-radius: 25px;

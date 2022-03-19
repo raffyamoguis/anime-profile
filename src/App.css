@@ -1,5 +1,6 @@
 body {
   background-color: #f7f7f7;
+  color: #555d79
 }
 
 * {
@@ -11,6 +12,14 @@ body {
   background: transparent;
 }
 
+.btn-primary {
+  background-color: #ffc19d !important;
+  color: #f7f7f7 !important;
+  border: #ffc19d;
+}
+
+
+
 @media only screen and (max-width: 991px) {
   .search {
     margin-top: .5em !important;
@@ -18,8 +27,24 @@ body {
   .menu-nav {
     margin-top: 1px !important;
   }
-  i.bi {
-    margin-left: -50px;
+  
+  .menuIcon i {
+    /* width: 200px !important; */
+    text-align: left !important;
+    margin-left: 1em !important;
+  }
+  
+  .search-form {
+    border-radius: 25px 25px 25px 25px !important;
+    color: red;
+  }
+
+  .icon-search {
+    margin-left: 0.5em !important;
+  }
+
+  .search {
+    /* float: left !important; */
   }
 }
 

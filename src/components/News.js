@@ -21,7 +21,7 @@ const News = () => {
                                 alt=""
                                 style={{ marginRight: '10px' }}
                             />
-                            <b>Trending Anime Topic</b>
+                            <b style={{ color: '#2f4858' }}>Trending Anime Topic</b>
                         </ListGroup.Item>
                         <ListGroup.Item className='anime-news-item'>
                             <div>
@@ -64,7 +64,7 @@ const News = () => {
                                 alt=""
                                 style={{ marginRight: '10px' }}
                             />
-                            <b>New Anime</b>
+                            <b style={{ color: '#2f4858' }}>New Anime</b>
                         </ListGroup.Item>
                         <ListGroup.Item className='anime-news-item'>
 

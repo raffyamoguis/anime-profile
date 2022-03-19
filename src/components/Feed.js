@@ -17,7 +17,7 @@ const Feed = () => {
                             <Form.Control className='post-content shadow-none border-0' as="textarea" placeholder="What happened?" rows={3} />
                         </Form.Group>
                     </Form>
-                    <div><Button className='float-right btn-sm' variant="primary">Post</Button></div>
+                    <div><Button className='float-right btn-sm btn-primary'>Post</Button></div>
 
                 </Card.Body>
             </Card>
@@ -26,15 +26,32 @@ const Feed = () => {
                 <Card.Body>
                     <Card.Title>Ryan Sheng</Card.Title>
                     <Card.Subtitle className='text-muted' style={{ fontSize: '10pt' }}>1 min.</Card.Subtitle>
-                    <Card.Text>
+                    <Card.Text className='mt-2'>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
+                    <hr />
+                    <div className='post-engagement mb-5'>
+                        <span className='float-start'><small>100K Likes</small></span>
+                        <span className='float-end'><small>2000 shares</small></span>
+                        <span className='float-end' style={{ marginRight: '10px' }}><small>2M Comments</small></span>
+                    </div>
                     <Row>
-                        <Col className='text-center'><div className="post-action love-btn"><i class="bi bi-heart"></i></div></Col>
-                        <Col className='text-center'><div className="post-action comment-btn"><i class="bi bi-chat"></i></div></Col>
-                        <Col className='text-center'><div className="post-action share-btn"><i class="bi bi-share"></i></div></Col>
+                        <Col className='text-center'>
+                            <div className="post-action love-btn">
+                                <i class="bi bi-heart"></i>
+                            </div>
+                        </Col>
+                        <Col className='text-center'>
+                            <div className="post-action comment-btn">
+                                <i class="bi bi-chat"></i>
+                            </div>
+                        </Col>
+                        <Col className='text-center'>
+                            <div className="post-action share-btn">
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </Col>
                     </Row>
                 </Card.Body>
             </Card>
@@ -46,7 +63,12 @@ const Feed = () => {
                     <Card.Text>
                         Morbi nibh nunc, convallis in viverra at, ullamcorper at ipsum. Phasellus varius sapien eget est elementum sodales. Maecenas volutpat ut turpis ut consectetur.
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
+                    <hr />
+                    <div className='post-engagement mb-5'>
+                        <span className='float-start'><small>100K Likes</small></span>
+                        <span className='float-end'><small>2000 shares</small></span>
+                        <span className='float-end' style={{ marginRight: '10px' }}><small>2M Comments</small></span>
+                    </div>
                     <Row>
                         <Col className='text-center'><div className="post-action love-btn"><i class="bi bi-heart"></i></div></Col>
                         <Col className='text-center'><div className="post-action comment-btn"><i class="bi bi-chat"></i></div></Col>
@@ -62,7 +84,12 @@ const Feed = () => {
                     <Card.Text>
                         Cras rhoncus laoreet finibus. Nam vel nisi semper, laoreet tellus quis, scelerisque risus. Fusce scelerisque, odio ac consequat dapibus, velit massa feugiat mi, mollis porttitor dui est a arcu. Integer malesuada libero nibh, et tempus elit placerat at. Etiam maximus, ligula ac pellentesque imperdiet, ante libero tempor tellus, id semper nisi tortor vel orci. Pellentesque commodo ex elit, sed tincidunt tortor ullamcorper vitae.
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
+                    <hr />
+                    <div className='post-engagement mb-5'>
+                        <span className='float-start'><small>100K Likes</small></span>
+                        <span className='float-end'><small>2000 shares</small></span>
+                        <span className='float-end' style={{ marginRight: '10px' }}><small>2M Comments</small></span>
+                    </div>
                     <Row>
                         <Col className='text-center'><div className="post-action love-btn"><i class="bi bi-heart"></i></div></Col>
                         <Col className='text-center'><div className="post-action comment-btn"><i class="bi bi-chat"></i></div></Col>
@@ -78,7 +105,12 @@ const Feed = () => {
                     <Card.Text>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse blandit purus eu magna aliquam, non rhoncus dolor mattis. Integer at feugiat orci. Ut consectetur nunc sed nulla malesuada dictum. Suspendisse vitae facilisis nibh. Donec gravida, nunc a hendrerit interdum, purus quam ultricies arcu, cursus suscipit massa tortor ac justo. In ut feugiat ex. Vivamus rutrum, libero ac suscipit dignissim, ligula turpis gravida mauris, vitae interdum enim ante at magna.
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
+                    <hr />
+                    <div className='post-engagement mb-5'>
+                        <span className='float-start'><small>100K Likes</small></span>
+                        <span className='float-end'><small>2000 shares</small></span>
+                        <span className='float-end' style={{ marginRight: '10px' }}><small>2M Comments</small></span>
+                    </div>
                     <Row>
                         <Col className='text-center'><div className="post-action love-btn"><i class="bi bi-heart"></i></div></Col>
                         <Col className='text-center'><div className="post-action comment-btn"><i class="bi bi-chat"></i></div></Col>
