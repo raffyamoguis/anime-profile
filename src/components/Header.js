@@ -46,7 +46,7 @@ export default class Header extends React.Component {
     }
     render() {
         return (
-            <Navbar className="navbarlight" collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar sticky='top' className="navbarlight" collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container >
 
                     {/* Navbar Logo */}

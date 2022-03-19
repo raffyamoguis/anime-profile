@@ -9,51 +9,51 @@ import Col from 'react-bootstrap/Col';
 import $ from 'jquery'
 
 export default class Content extends React.Component {
-    hideFriendsList = () => {
-        var x = window.matchMedia("(max-width: 991px");
+    hideFriendsList = (viewport, media) => {
+        var x = window.matchMedia(viewport);
         myFunction(x);
         x.addListener(myFunction);
 
         function myFunction(x) {
 
             if (x.matches) {
-                $('.friends').hide()
+                $(media).hide()
 
             } else {
-                $('.friends').show()
+                $(media).show()
+            }
+        }
+    }
+    hideFriendsListW = (viewport, media) => {
+        var x = window.matchMedia(viewport);
+        myFunction(x);
+        x.addListener(myFunction);
+
+        function myFunction(x) {
+
+            if (x.matches) {
+                $(media).hide()
+                $('.feed').css('width', '100%')
+            } else {
+                $(media).show()
             }
         }
     }
     componentDidMount() {
-        this.hideFriendsList();
+        this.hideFriendsList("(max-width: 991px", '.friends');
+        this.hideFriendsList("(max-width: 768px", '.news');
     }
     render() {
         return (
             <Container>
                 <Row style={{ height: '100vh' }}>
-                    <Col sm={3} className='mt-2'>
+                    <Col md={4} lg={3} className='mt-4 news'>
                         <News />
                     </Col>
-                    <Col sm={6} style={{ overflowY: 'auto', height: '100%' }}><Feed /></Col>
-                    <Col sm={3} className='mt-2 friends'><Friends /></Col>
+                    <Col sm={12} md={8} lg={6} className='feed mt-2' style={{ overflowY: 'auto', height: '100%' }}><Feed /></Col>
+                    <Col lg={3} className='mt-4 friends'><Friends /></Col>
                 </Row>
             </Container>
         )
     }
 }
-
-// const Content = () => {
-//     return (
-//         <Container>
-//             <Row style={{ height: '100vh' }}>
-//                 <Col sm={3} className='mt-2'>
-//                     <News />
-//                 </Col>
-//                 <Col sm={6} style={{ overflowY: 'auto', height: '100%' }}><Feed /></Col>
-//                 <Col sm={3} className='mt-2 friends'><Friends /></Col>
-//             </Row>
-//         </Container>
-//     )
-// }
-
-// export default Content
