@@ -32,26 +32,19 @@ const Profile = () => {
                     <Card className='mt-2' border='0'>
                         <Card.Body>
                             <Card.Title>Profile Information</Card.Title>
-                            {/* <Card.Subtitle className="mb-2 text-muted">@johndoe</Card.Subtitle> */}
-                            {/* <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link> */}
                             <hr />
                             <Form className='mt-2'>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Full Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Full Name" value="John Doe" />
+                                    <Form.Control className='profile-info shadow-none rounded-0' type="text" placeholder="Full Name" value="John Doe" />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Username</Form.Label>
-                                    <Form.Control type="text" placeholder="Username" value="@johndoe" />
+                                    <Form.Control className='profile-info shadow-none rounded-0' type="text" placeholder="Username" value="@johndoe" />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Address</Form.Label>
-                                    <Form.Control type="text" placeholder="Address" value="Guio-ang Guindulman Bohol" />
+                                    <Form.Control className='profile-info shadow-none rounded-0' type="text" placeholder="Address" value="Guio-ang Guindulman Bohol" />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Save
@@ -64,14 +57,6 @@ const Profile = () => {
                     <Card className='mt-2' border='0'>
                         <Card.Body>
                             <Card.Title>Media</Card.Title>
-                            {/* 
-                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                            </Card.Text>
-                            <Card.Link href="#">Card Link</Card.Link>
-                            <Card.Link href="#">Another Link</Card.Link> */}
 
                             <section class="gallery">
                                 <div class="gallery__item">

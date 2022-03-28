@@ -14,6 +14,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 import $ from 'jquery'
 
 export default class Header extends React.Component {
+
     myJCode = () => {
         var x = window.matchMedia("(max-width: 991px");
         myFunction(x);
@@ -47,6 +48,7 @@ export default class Header extends React.Component {
         this.myJCode();
     }
     render() {
+
         return (
             <Navbar sticky='top' className="navbarlight" collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container >
@@ -64,7 +66,7 @@ export default class Header extends React.Component {
                         </Navbar.Brand>
                     </LinkContainer>
 
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className='shadow-none' />
 
                     <Navbar.Collapse id="responsive-navbar-nav">
 
@@ -82,24 +84,24 @@ export default class Header extends React.Component {
                             </InputGroup>
                         </Nav>
 
-                        <Nav className="mx-auto menu-nav" activeKey="/">
+                        <Nav className="mx-auto menu-nav" >
                             <Nav.Item className='menu-nav-item'>
                                 <LinkContainer to='/'>
-                                    <Nav.Link className="menuIcon" id='test'>
+                                    <Nav.Link eventKey="/" className="menuIcon">
                                         <i className="bi bi-house-door"></i>
                                     </Nav.Link>
                                 </LinkContainer>
                             </Nav.Item>
                             <Nav.Item className='menu-nav-item'>
                                 <LinkContainer to='/videos'>
-                                    <Nav.Link eventKey="link-1" className="menuIcon">
+                                    <Nav.Link eventKey="/videos" className="menuIcon">
                                         <i className='bi bi-play-circle'></i>
                                     </Nav.Link>
                                 </LinkContainer>
                             </Nav.Item>
                             <Nav.Item className='menu-nav-item'>
                                 <LinkContainer to='/profile'>
-                                    <Nav.Link className="menuIcon">
+                                    <Nav.Link eventKey='/profile' className="menuIcon">
                                         <i className='bi bi-people'></i>
                                     </Nav.Link>
                                 </LinkContainer>
@@ -131,7 +133,7 @@ export default class Header extends React.Component {
                     </Navbar.Collapse>
 
                 </Container>
-            </Navbar>
+            </Navbar >
         )
     }
 }

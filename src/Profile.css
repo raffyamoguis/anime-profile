@@ -96,3 +96,15 @@
   .gallery__selector:checked ~ .gallery__thumb > img {
     box-shadow: 0 0 0 3px #0be2f6;
   }
+
+  .profile-info {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    color:#555d79;
+  }
+
+  .profile-info:focus {
+    color: #555d79;
+    border-color: #ffc19d;
+  }
