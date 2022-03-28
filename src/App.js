@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
+      <div className='text-center' style={{ backgroundColor: 'grey', color: 'white', fontSize: '12px', padding: '8px' }}>This site is demo only due to the developer lack of resources, for full features with backend checkout this repo with branch backend. Thank you.</div>
       <Router>
         <Header />
         <Routes>
