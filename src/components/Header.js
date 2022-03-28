@@ -9,6 +9,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 
+import { LinkContainer } from 'react-router-bootstrap'
+
 import $ from 'jquery'
 
 export default class Header extends React.Component {
@@ -50,15 +52,17 @@ export default class Header extends React.Component {
                 <Container >
 
                     {/* Navbar Logo */}
-                    <Navbar.Brand href="#home">
-                        <img
-                            src={logo}
-                            width="45"
-                            height="45"
-                            className="d-inline-block align-top"
-                            alt=""
-                        />
-                    </Navbar.Brand>
+                    <LinkContainer to='/'>
+                        <Navbar.Brand>
+                            <img
+                                src={logo}
+                                width="45"
+                                height="45"
+                                className="d-inline-block align-top"
+                                alt=""
+                            />
+                        </Navbar.Brand>
+                    </LinkContainer>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -78,35 +82,43 @@ export default class Header extends React.Component {
                             </InputGroup>
                         </Nav>
 
-                        <Nav className="mx-auto menu-nav" activeKey="/home">
+                        <Nav className="mx-auto menu-nav" activeKey="/">
                             <Nav.Item className='menu-nav-item'>
-                                <Nav.Link href="/home" className="menuIcon" id='test'>
-                                    <i className="bi bi-house-door"></i>
-                                </Nav.Link>
+                                <LinkContainer to='/'>
+                                    <Nav.Link className="menuIcon" id='test'>
+                                        <i className="bi bi-house-door"></i>
+                                    </Nav.Link>
+                                </LinkContainer>
                             </Nav.Item>
                             <Nav.Item className='menu-nav-item'>
-                                <Nav.Link eventKey="link-1" className="menuIcon">
-                                    <i className='bi bi-play-circle'></i>
-                                </Nav.Link>
+                                <LinkContainer to='/videos'>
+                                    <Nav.Link eventKey="link-1" className="menuIcon">
+                                        <i className='bi bi-play-circle'></i>
+                                    </Nav.Link>
+                                </LinkContainer>
                             </Nav.Item>
                             <Nav.Item className='menu-nav-item'>
-                                <Nav.Link eventKey="link-2" className="menuIcon">
-                                    <i className='bi bi-people'></i>
-                                </Nav.Link>
+                                <LinkContainer to='/profile'>
+                                    <Nav.Link className="menuIcon">
+                                        <i className='bi bi-people'></i>
+                                    </Nav.Link>
+                                </LinkContainer>
                             </Nav.Item>
                         </Nav>
 
                         <Nav>
-                            <Nav.Link href="#deets" >
-                                <img
-                                    src={profile}
-                                    width="30"
-                                    height="30"
-                                    className="d-inline-block align-top"
-                                    alt=""
-                                    style={{ marginRight: '5px' }}
-                                />John Doe
-                            </Nav.Link>
+                            <LinkContainer to='/profile'>
+                                <Nav.Link >
+                                    <img
+                                        src={profile}
+                                        width="30"
+                                        height="30"
+                                        className="d-inline-block align-top"
+                                        alt=""
+                                        style={{ marginRight: '5px' }}
+                                    />John Doe
+                                </Nav.Link>
+                            </LinkContainer>
                             <NavDropdown className='test' align='end' title="">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
