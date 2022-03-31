@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Col, Row, Card } from 'react-bootstrap'
+import { Player, BigPlayButton } from 'video-react';
+import video from '../vid/videoplayback (2).mp4'
 
 const Videos = () => {
     return (
@@ -8,10 +10,13 @@ const Videos = () => {
                 <Card.Body>
                     <Card.Title>Ryan Sheng</Card.Title>
                     <Card.Subtitle className='text-muted' style={{ fontSize: '10pt' }}>1 min.</Card.Subtitle>
-                    <Card.Text className='mt-2'>
+                    {/* <Card.Text className='mt-2'>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
-                    </Card.Text>
+                    </Card.Text> */}
+                    <Player src={video}>
+                        <BigPlayButton position="center" />
+                    </Player>
                     <hr />
                     <div className='post-engagement mb-5'>
                         <span className='float-start'><small>100K Likes</small></span>

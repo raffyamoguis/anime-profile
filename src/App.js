@@ -5,6 +5,7 @@ import Content from './components/Content';
 import Profile from './components/Profile'
 import Videos from './components/Videos'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import "../node_modules/video-react/dist/video-react.css";
 
 function App() {
   return (
