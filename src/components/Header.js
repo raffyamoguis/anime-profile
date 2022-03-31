@@ -66,7 +66,9 @@ export default class Header extends React.Component {
                         </Navbar.Brand>
                     </LinkContainer>
 
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className='shadow-none' />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className='shadow-none border-0'>
+                        <i class="bi bi-list"></i>
+                    </Navbar.Toggle>
 
                     <Navbar.Collapse id="responsive-navbar-nav">
 
@@ -109,8 +111,9 @@ export default class Header extends React.Component {
                         </Nav>
 
                         <Nav>
-                            <LinkContainer to='/profile'>
-                                <Nav.Link >
+                            <div style={{ display: 'flex' }}>
+                                {/* <LinkContainer to='/profile'> */}
+                                <Nav.Link>
                                     <img
                                         src={profile}
                                         width="30"
@@ -120,14 +123,15 @@ export default class Header extends React.Component {
                                         style={{ marginRight: '5px' }}
                                     />John Doe
                                 </Nav.Link>
-                            </LinkContainer>
-                            <NavDropdown className='test' align='end' title="">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                            </NavDropdown>
+                                {/* </LinkContainer> */}
+                                <NavDropdown className='test' align='end' title="">
+                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                </NavDropdown>
+                            </div>
                         </Nav>
 
                     </Navbar.Collapse>

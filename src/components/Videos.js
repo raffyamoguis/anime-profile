@@ -10,11 +10,10 @@ const Videos = () => {
                 <Card.Body>
                     <Card.Title>Ryan Sheng</Card.Title>
                     <Card.Subtitle className='text-muted' style={{ fontSize: '10pt' }}>1 min.</Card.Subtitle>
-                    {/* <Card.Text className='mt-2'>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text> */}
-                    <Player src={video}>
+                    <Card.Text className='mt-2'>
+                        Raiden Shogon Uwu...
+                    </Card.Text>
+                    <Player className='mt-2' src={video}>
                         <BigPlayButton position="center" />
                     </Player>
                     <hr />

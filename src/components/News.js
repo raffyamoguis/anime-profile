@@ -55,15 +55,16 @@ const News = () => {
                     <hr />
                     <ListGroup className='anime-news'>
                         <ListGroup.Item className='anime-news-item'>
-                            <img
+                            {/* <img
                                 src={newanime}
                                 width="30"
                                 height="30"
                                 className="d-inline-block align-top"
                                 alt=""
                                 style={{ marginRight: '10px' }}
-                            />
-                            <b style={{ color: '#2f4858' }}>New Anime</b>
+                            /> */}
+                            <i class="bi bi-activity"></i>
+                            <b style={{ color: '#2f4858' }}> Sponsored Content</b>
                         </ListGroup.Item>
                         <ListGroup.Item className='anime-news-item'>
 
